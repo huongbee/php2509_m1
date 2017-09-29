@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS buổi 3</title>
+</head>
+
+<style>
+.container{
+    width: 100%;
+}
+.hello, #lop{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    float: left;
+}
+.hello{
+    background-color: yellow;
+    color: green;
+    font-size: 20px
+}
+
+#lop{
+    font-size: 30px;
+    background-color: blue
+}
+.img-center{
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ee42f4;
+    background-color:transparent;
+    float: none;
+}
+.img-center img{
+    width: 200px;
+    display: block;
+    margin: 150px;
+}
+.img-left{
+    float: none
+}
+.img{
+    clear: both;
+}
+body{
+    background: url('image/a.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+</style>
+
+
+<body>
+    <div class="container">
+        <div class="hello">
+            Hello World!
+        </div>
+        <div id="lop">
+            Hello Class!
+        </div>
+        <div id="lop">
+            Hello Class!
+        </div>
+    </div>
+    <div class="img">
+        <div class="img-center">
+            <img src="../image/flowers.jpg" alt="Hoa">
+        </div>
+        <div class="img-left">
+            <img src="../image/flowers.jpg" alt="Hoa">
+        </div>
+    </div>
+</body>
+</html>
