@@ -1,0 +1,35 @@
+.container{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    display: block
+}
+.menucha li{
+    float: left;
+    list-style-type: none;
+    padding: 10px 20px;
+    background-color: blue;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border-left: 1px  solid #fff
+}
+.menucon li{
+    float: none;
+    border-left: none;
+    border-bottom: 1px  solid #fff;
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 10px;
+    margin-left: -59px;
+    margin-right: -20px;
+}
+.menucha li:hover .menucon li{
+    display: block;
+
+}
+.menucha li:hover{
+    background-color: #df97f4
+}

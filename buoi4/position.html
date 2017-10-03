@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Postion</title>
+</head>
+<style>
+    .maudo{
+        width: 500px;
+        height: 500px;
+        background-color: red;
+        position: absolute;/*ko phụ thuộc vào đối tượng*/
+        top:0px;
+        left: 200px;
+        z-index: 1
+    }
+    .mauxanh{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        position: relative; /*có phụ thuộc vào đối tượng bên cạnh*/
+        top: 80px;
+        left: 100px;
+        z-index: 2
+    }
+    .mauvang{
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        position: absolute;
+        top: 50px;
+        left: 150px
+    }
+</style>
+
+
+<body>
+    <div class="maudo"></div>
+    <div class="mauxanh"></div>
+    <div class="mauvang"></div>
+    
+</body>
+</html>

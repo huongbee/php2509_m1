@@ -1,16 +1,55 @@
 body{
     background-image: url('../image/a.jpg');
     background-color: #d8fcd4;
-    background-size: cover
+    background-size: cover;
+    margin: 0;
+    padding: 0
 }
 
 .container{
     width: 800px;
-    height: 1000px;
-    border: 3px dotted #000000;
     margin: 0 auto
 }
 .header{
+    width: 800px;
+    height: 80px;
+    background-color: red;
+}
+.content{
+    height: 150px
+}
+.content .left{
+    width: 30%;
+    height: 150px;
+    background-color: #80e575;
+    float: left
+}
+.content .right{
+    width: 70%;
+    height: 150px;
+    background-color: #ff9eae;
+    float: left
+}
+.content2{
+    clear: both;
+}
+.content2 .left{
+    width: 50%;
+    height: 150px;
+    background-color: #fca416;
+    float: left
+}
+.content2 .right{
+    width: 50%;
+    height: 150px;
+    background-color: #94a2fc;
+    float: left;
+    border-radius: 10px
+}
+.content2{
+    height: 150px
+}
+.footer{
     width: 800px;
     height: 80px;
     background-color: red;
