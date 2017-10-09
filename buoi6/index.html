@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS</title>
+</head>
+<body>
+    <div id="test"></div>
+    <button onclick="document.getElementById('test').innerHTML = 'Hello Class';">Click Me!</button>
+
+
+    <div>
+        <img id="light" src="images/pic_bulboff.gif">
+        <!-- <button onclick="turnOff()">Turn Off</button> -->
+        <button onclick="turn()" id="btnTurn">Turn On</button>
+    </div>
+    <script>
+        //document.write('Hello World!');      
+        function turn(){
+            var btn = document.getElementById('btnTurn');
+            var light = document.getElementById('light');
+            light.src = "images/pic_bulbon.gif";
+            btn.innerHTML = "Turn Off";
+
+            
+             //console.log(btn);
+
+           // document.getElementById('light').src='images/pic_bulbon.gif'
+        }
+        // function turnOff(){
+        //     document.getElementById('light').src='images/pic_bulboff.gif'
+        // }
+
+
+
+    </script>
+</body>
+
+</html>
