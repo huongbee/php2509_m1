@@ -6,25 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JS</title>
 </head>
+<style>
+    input{
+        width: 50px
+    }
+</style>
 <body>
-    <div id="test"></div>
+    <!-- <div id="test"></div>
     <button onclick="document.getElementById('test').innerHTML = 'Hello Class';">Click Me!</button>
 
 
     <div>
         <img id="light" src="images/pic_bulboff.gif">
-        <!-- <button onclick="turnOff()">Turn Off</button> -->
+        
         <button onclick="turn()" id="btnTurn">Turn On</button>
-    </div>
+    </div> -->
+    <span id="soa">5</span> + <span id="sob">6</span> = <span id="result"></span>
+    <hr>
+    <input id="soThunhat" value="5">
+    <select id="pheptinh">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+    <input id="soThuhai" value="6"> = 
+    <input id="ketqua" value="11" readonly>
+    <button onclick="Calculator()">Tính</button>
+
     <script>
+       // 
+       //window.confirm('Chào bạn');
+       //window.alert('Chào bạn');
         //document.write('Hello World!');      
         function turn(){
             var btn = document.getElementById('btnTurn');
             var light = document.getElementById('light');
-            light.src = "images/pic_bulbon.gif";
-            btn.innerHTML = "Turn Off";
 
-            
+            var a = btn.innerHTML;
+            console.log(a);
+
+
+            if(btn.innerHTML == "Turn Off"){
+                light.src = "images/pic_bulboff.gif";
+                btn.innerHTML = "Turn On";
+            }
+            else{
+                light.src = "images/pic_bulbon.gif";
+                btn.innerHTML = "Turn Off";
+            }
              //console.log(btn);
 
            // document.getElementById('light').src='images/pic_bulbon.gif'
@@ -33,7 +63,58 @@
         //     document.getElementById('light').src='images/pic_bulboff.gif'
         // }
 
+            var x = 5
+            var y = 6
 
+            var so_a = document.getElementById('soa').innerHTML;            
+            var so_b = document.getElementById('sob').innerHTML;
+
+            so_a = parseInt(so_a)
+            so_b = parseInt(so_b)
+
+            document.getElementById('result').innerHTML = so_a+so_b
+
+
+            function Calculator(){
+                var inputSoa = document.getElementById('soThunhat') 
+                var inputSob = document.getElementById('soThuhai') 
+                var pt = document.getElementById('pheptinh').value 
+                var kq = document.getElementById('ketqua')
+
+                so_a = parseInt(inputSoa.value)
+                so_b = parseInt(inputSob.value)
+
+                if(isNaN(inputSoa.value) ){
+                    alert('Vui lòng nhập số')
+                    inputSoa.focus();
+                    return false;
+                }
+                if(isNaN(inputSob.value) ){
+                    alert('Vui lòng nhập số')
+                    inputSob.focus();
+                    return false;
+                }
+
+                if(pt=="+"){
+                    kq.value = so_a+so_b
+                }
+                else if(pt=="-"){
+                    kq.value = so_a-so_b
+                }
+                else if(pt=="*"){
+                    kq.value = so_a*so_b
+                }
+                else{
+                    if(so_b!=0) kq.value = so_a+so_b
+                    else{
+                        alert('Số b phải khác 0')
+                        document.getElementById('soThuhai').focus()
+                        return false
+                    }
+                }
+
+                
+            }
 
     </script>
 </body>
