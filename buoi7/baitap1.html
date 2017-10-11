@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="-" class="btnTru" >
+    <input class="txtSoluong" value="1" style="width:50px">
+    <input type="button" value="+" class="btnCong">
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            //$('.txtSoluong').val()    : lấy giá trị
+            //$('.txtSoluong').val(1234): gán giá trị
+            $('.btnCong').click(function(){
+                var soluong = $('.txtSoluong').val();
+                soluong = parseInt(soluong);
+                if(soluong<20){
+                    $('.txtSoluong').val(soluong+1);
+                    $('.btnTru').removeAttr('disabled')
+                }
+                if(soluong==19){
+                    $('.btnCong').attr('disabled','true')
+                }
+                
+            })
+            $('.btnTru').click(function(){
+                var soluong = $('.txtSoluong').val();                
+                if(soluong>1){
+                    $('.txtSoluong').val(soluong-1);
+                    $('.btnCong').removeAttr('disabled')
+                }
+                if(soluong==2){
+                    $('.btnTru').attr('disabled','true')
+                }
+            })
+        })
+    </script>
+</body>
+</html>

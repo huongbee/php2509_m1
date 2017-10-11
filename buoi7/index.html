@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Jquery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        
+        <div class="box">0</div>
+        <button id="btnClick">Click me!</button>
+
+        <script src="js/jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                // var btn = $('#btnClick')
+                // console.log(btn);
+                var a = 1;
+                var box = $('.box')
+                // box.text(a)
+                // a+=1;
+                box.css({
+                    "width":"200px",
+                    'height':"200px",
+                    "background-color":"blue",
+                    'display':"none"
+                })
+                $('#btnClick').click(function(){
+                    //console.log(a)
+                    //a = a+1;
+                    //a++;
+                    //++a
+                    //a+=1;
+                    //box.hide(); //ẩn
+                    //box.show()//hiện
+                    //box.toggle()
+                    if(a%2==0){
+                        
+                        //box.slideUp()
+                        box.fadeOut(4000);
+                    }
+                    else{
+                        //box.slideDown();
+                        box.fadeIn(2000);
+                    }
+                    a++;
+                })
+
+            })
+
+        </script>
+    </body>
+</html>
