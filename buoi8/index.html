@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="container">
+        <p>Hello World!</p>
+    </div> -->
+    <button>Thêm</button>
+    <div>
+        <span class="sohang" id="so_hang" ten-cua-ban="Hương">1+2</span> = <span class="tong">3</span>
+     </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            // var text = $('.container').text() //lấy giá trị
+            // console.log(text)
+            //$('.container').text('Hello Class') //gán giá trị
+            //$('.container').html('<b>Hello Class</b>') //gán giá trị
+            // var text = $('.container').html() //lấy giá trị
+            //console.log(text)
+
+            var btn = 2;
+            $('button').on('click',function(){
+                //$('.container').append('<h1>Hello Class</h1>');
+                //$('.container').prepend('<h1>Hello Class</h1>');
+                btn+=1;
+                $('.sohang').append('+'+btn)
+                var tong = ((btn+1)*btn)/2;
+                $('.tong').text(tong)
+            })
+
+            $('button').on('click',function(){
+                var attr1 = $('.sohang').attr("class");
+                var attr2 = $('.sohang').attr("id");
+                var attr3 = $('.sohang').attr("ten-cua-ban");
+                console.log(attr1)
+                console.log(attr2)
+                console.log(attr3)
+                $('.sohang').attr("ten-cua-ban","KhoaPham")
+                
+                attr3 = $('.sohang').attr("ten-cua-ban");
+                console.log(attr3)
+            })
+        })
+    </script>
+
+</body>
+</html>

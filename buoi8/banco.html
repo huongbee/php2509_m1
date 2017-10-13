@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="banco">
+    </div>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                for(var i=1;i<=400;i++){
+                    $('.banco').append('<div class="o_co"></div>')
+                }
+
+                $('.banco').css({
+                    "width":"440px"
+                })
+                $('.o_co').css({
+                    'width': '20px',
+                    'height': '20px',
+                    'backgroundColor': '#c4fff4',
+                    'float': 'left',
+                    'border': '1px solid red'
+                })
+
+                $('.o_co').mouseover(function(){
+                    $(this).css({
+                        'backgroundColor': '#ea7979'
+                    })
+                })
+                $('.o_co').mouseout(function(){
+                    $(this).css({
+                        'backgroundColor': '#c4fff4'
+                    })
+                }) 
+
+
+            })
+        </script>
+</body>
+</html>

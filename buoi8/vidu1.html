@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .ten{
+        color: red;
+        font-size: 20px
+    }
+    .chieucao{
+        background-color: #f7afea;
+        color: blue
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="thongtin">
+                <p class="ten">Hình 1</p>
+                <p class="chieucao">150px</p>
+        </div>
+        
+        <img width="150px" class="images"  src="http://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg">
+        <button>Click</button>
+    </div>
+    
+        <script src="js/jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('button').click(function(){
+                    //$('.images').remove()
+                    $('.images').attr('width','300px')
+                    //$('.chieucao').empty()
+                   // $('.chieucao').text('')
+
+                    $('.ten').addClass('chieucao')
+                    $('.chieucao').removeClass('chieucao')
+                })
+            })
+        </script>
+</body>
+</html>
