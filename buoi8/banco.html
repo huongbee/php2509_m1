@@ -24,7 +24,9 @@
                     'height': '20px',
                     'backgroundColor': '#c4fff4',
                     'float': 'left',
-                    'border': '1px solid red'
+                    'border': '1px solid red',
+                    "color":"blue",
+                    'textAlign':"center"
                 })
 
                 $('.o_co').mouseover(function(){
@@ -37,6 +39,22 @@
                         'backgroundColor': '#c4fff4'
                     })
                 }) 
+
+                dem = 1;
+                $('.o_co').click(function(){
+                    if($(this).text()==""){
+                        if(dem%2==1){
+                            $(this).text("X")
+                        }
+                        else{
+                            $(this).text("O")
+                        }
+                        dem+=1;
+                    }
+                    else{
+                        alert('Cant check this again!')
+                    }
+                })
 
 
             })
